@@ -1,36 +1,155 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Haidar Fahmi - Personal Portfolio
 
-## Getting Started
+Ini adalah proyek portofolio pribadi yang dibuat menggunakan Next.js, TypeScript, dan Tailwind CSS. Website ini menampilkan informasi tentang saya, pengalaman kerja, proyek yang pernah dikerjakan, serta keahlian yang dimiliki.
 
-First, run the development server:
+## ✨ Fitur Utama
+
+* **Responsif:** Didesain agar tampil baik di berbagai ukuran layar (desktop, tablet, mobile).
+* **Navigasi:** Dilengkapi dengan navigasi header yang sticky dan navigasi mobile (hamburger menu).
+* **Animasi Halus:** Menggunakan Framer Motion untuk transisi antar halaman dan animasi komponen.
+* **Komponen UI Modern:** Dibangun dengan Shadcn UI dan Radix UI untuk komponen yang aksesibel dan dapat disesuaikan.
+* **Scrollspy:** Navigasi aktif mengikuti bagian halaman yang sedang dilihat.
+* **Data Dinamis (Dummy):** Informasi pengalaman, proyek, dan keahlian diambil dari file JSON.
+* **Struktur Proyek Rapi:** Mengikuti standar struktur proyek Next.js dengan App Router.
+
+## 🛠️ Teknologi yang Digunakan
+
+* **Framework:** [Next.js](https://nextjs.org/)
+* **Bahasa:** [TypeScript](https://www.typescriptlang.org/)
+* **Styling:** [Tailwind CSS](https://tailwindcss.com/)
+* **Komponen UI:** [Shadcn UI](https://ui.shadcn.com/), [Radix UI](https://www.radix-ui.com/)
+* **Animasi:** [Framer Motion](https://www.framer.com/motion/)
+* **Icons:** [React Icons](https://react-icons.github.io/react-icons/), [Lucide React](https://lucide.dev/)
+* **Linting:** [ESLint](https://eslint.org/)
+
+## 📋 Prasyarat
+
+Sebelum memulai, pastikan Anda telah menginstal:
+
+* [Node.js](https://nodejs.org/) (Direkomendasikan versi >= 18)
+* [npm](https://www.npmjs.com/), [yarn](https://yarnpkg.com/), [pnpm](https://pnpm.io/), atau [bun](https://bun.sh/)
+
+## 🚀 Instalasi
+
+1.  **Clone repositori:**
+    ```bash
+    git clone [https://github.com/haidarfahmii/my-portfolio.git](https://github.com/haidarfahmii/my-portfolio.git)
+    cd my-portfolio
+    ```
+
+2.  **Instal dependensi:**
+    ```bash
+    npm install
+    # atau
+    yarn install
+    # atau
+    pnpm install
+    # atau
+    bun install
+    ```
+
+## 📂 Susunan Proyek
+```bash
+my-portfolio/
+├── .gitignore
+├── README.md
+├── components.json
+├── eslint.config.mjs
+├── next.config.ts
+├── package-lock.json
+├── package.json
+├── postcss.config.mjs
+├── public/
+│   ├── file.svg
+│   ├── globe.svg
+│   ├── icons/
+│   │   ├── css.svg
+│   │   ├── github.svg
+│   │   ├── gitlab.svg
+│   │   ├── html.svg
+│   │   ├── javascript.svg
+│   │   ├── nextjs.svg
+│   │   ├── postman.svg
+│   │   ├── reactjs.svg
+│   │   ├── svelte.svg
+│   │   └── vscode.svg
+│   ├── images/
+│   │   ├── foto.png
+│   │   ├── jinwo.png
+│   │   ├── profile.jpg
+│   │   └── project.png
+│   ├── next.svg
+│   ├── resume/
+│   │   ├── badge.svg
+│   │   ├── cap.svg
+│   │   └── icons/
+│   │       ├── bootstrap.svg
+│   │       ├── css3.svg
+│   │       ├── html5.svg
+│   │       ├── javascript.svg
+│   │       ├── nextjs.svg
+│   │       ├── php.svg
+│   │       ├── react.svg
+│   │       ├── scroll.svg
+│   │       └── tailwind.svg
+│   ├── vercel.svg
+│   └── window.svg
+├── src/
+│   ├── app/
+│   │   ├── contact/
+│   │   │   └── page.tsx
+│   │   ├── favicon.ico
+│   │   ├── globals.css
+│   │   ├── layout.tsx
+│   │   └── page.tsx
+│   ├── components/
+│   │   ├── AboutMe.tsx
+│   │   ├── Experience.tsx
+│   │   ├── Header.tsx
+│   │   ├── Hero/
+│   │   │   └── Hero.tsx
+│   │   ├── MobileNav.tsx
+│   │   ├── Nav.tsx
+│   │   ├── PageTransition.tsx
+│   │   ├── Photo.tsx
+│   │   ├── ProfileCard.css
+│   │   ├── ProfileCard.jsx
+│   │   ├── ProfileImage.tsx
+│   │   ├── Project.tsx
+│   │   ├── Skill.tsx
+│   │   ├── SocialLinks/
+│   │   │   └── SocialLinks.tsx
+│   │   ├── StairTransition.tsx
+│   │   ├── Stairs.tsx
+│   │   ├── Stats.tsx
+│   │   └── ui/
+│   │       ├── button.tsx
+│   │       ├── input.tsx
+│   │       ├── scroll-area.tsx
+│   │       ├── select.tsx
+│   │       ├── sheet.tsx
+│   │       ├── tabs.tsx
+│   │       ├── textarea.tsx
+│   │       └── tooltip.tsx
+│   ├── dummy/
+│   │   ├── experience.json
+│   │   ├── project.json
+│   │   └── skill.json
+│   └── lib/
+│       └── utils.ts
+└── tsconfig.json
+```
+
+## ▶️ Menjalankan Proyek
+
+Untuk menjalankan server pengembangan lokal:
 
 ```bash
 npm run dev
-# or
+# atau
 yarn dev
-# or
+# atau
 pnpm dev
-# or
+# atau
 bun dev
 ```
-
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
