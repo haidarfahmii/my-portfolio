@@ -1,4 +1,4 @@
-# Haidar Fahmi - Personal Portfolio
+# Personal Portfolio
 
 Ini adalah proyek portofolio pribadi yang dibuat menggunakan Next.js, TypeScript, dan Tailwind CSS. Website ini menampilkan informasi tentang saya, pengalaman kerja, proyek yang pernah dikerjakan, serta keahlian yang dimiliki.
 
