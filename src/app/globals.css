@@ -1,8 +1,60 @@
 @import "tailwindcss";
 
+@layer base {
+  html {
+    @apply scroll-smooth scroll-mt-[140px];
+  }
+
+  body {
+    @apply bg-[#1c1c22] text-white leading-loose;
+  }
+
+  .h1 {
+    @apply text-4xl lg:text-5xl leading-[1.1] font-semibold;
+  }
+
+  .h2 {
+    @apply text-2xl lg:text-4xl leading-[1.1] font-semibold;
+  }
+
+  .h3 {
+    @apply text-xl lg:text-3xl leading-[1.1] font-semibold;
+  }
+
+  @keyframes pulse {
+    0%,
+    100% {
+      box-shadow: 0 0 20px rgba(251, 191, 36, 0.5);
+    }
+    50% {
+      box-shadow: 0 0 40px rgba(251, 191, 36, 0.8);
+    }
+  }
+
+  @keyframes float {
+    0%,
+    100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-20px);
+    }
+  }
+
+  @keyframes pulse {
+    0%,
+    100% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.05);
+    }
+  }
+}
+
 :root {
   --background: #ffffff;
-  --foreground: #171717;
+  --foreground: #1c1c22;
 }
 
 @theme inline {
@@ -14,7 +66,7 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
+    --background: #1c1c22;
     --foreground: #ededed;
   }
 }
@@ -22,5 +74,5 @@
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-jetbrainsMono);
 }
