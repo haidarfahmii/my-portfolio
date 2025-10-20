@@ -1,0 +1,42 @@
+[
+  {
+    "name": "HTML",
+    "iconUrl": "/icons/html.svg"
+  },
+  {
+    "name": "CSS",
+    "iconUrl": "/icons/css.svg"
+  },
+  {
+    "name": "JavaScript",
+    "iconUrl": "/icons/javascript.svg"
+  },
+  {
+    "name": "React JS",
+    "iconUrl": "/icons/reactjs.svg"
+  },
+  {
+    "name": "Svelte JS",
+    "iconUrl": "/icons/svelte.svg"
+  },
+  {
+    "name": "Next.js",
+    "iconUrl": "/icons/nextjs.svg"
+  },
+  {
+    "name": "VS Code",
+    "iconUrl": "/icons/vscode.svg"
+  },
+  {
+    "name": "Postman",
+    "iconUrl": "/icons/postman.svg"
+  },
+  {
+    "name": "Gitlab",
+    "iconUrl": "/icons/gitlab.svg"
+  },
+  {
+    "name": "GitHub",
+    "iconUrl": "/icons/github.svg"
+  }
+]

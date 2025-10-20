@@ -1,0 +1,44 @@
+[
+  {
+    "company": "Purwadhika",
+    "title": "Full Stack Web Developer",
+    "type": "Bootcamp",
+    "date": "2025 - Present",
+    "location": "BSD, Indonesia",
+    "description": "An intensive, project-based training program covering the entire web development lifecycle. Focused on building front-end interfaces with HTML, CSS, JavaScript, and Next.js, alongside back-end development, database management, and deployment processes.",
+    "achievements": [
+      "Developed and deployed multiple full-stack applications, culminating in a comprehensive capstone project using Next.js.",
+      "Engineered RESTful APIs to manage data flow between the client-side and server-side of applications.",
+      "Practiced Agile (Scrum) methodologies and Git version control in a team-based environment to simulate a professional workflow."
+    ],
+    "technologies": ["HTML", "CSS", "JavaScript", "Next.js"]
+  },
+  {
+    "company": "LingoTalk Ltd",
+    "title": "Front End Web Developer Intern",
+    "type": "Internship",
+    "date": "2021 - 2021",
+    "location": "Jakarta, Indonesia",
+    "description": "Contributed to the development and maintenance of the front-end codebase for client-facing projects. Collaborated closely with UI/UX designers and product managers to translate Figma designs into functional, responsive Svelte.js components.",
+    "achievements": [
+      "Successfully translated Figma designs into pixel-perfect, responsive UI components using Svelte.js and CSS.",
+      "Assisted in debugging and refactoring existing code, helping to improve application stability and UI consistency.",
+      "Participated in code reviews and agile ceremonies, gaining hands-on experience in a professional development workflow."
+    ],
+    "technologies": ["Figma", "CSS", "Svelte.js"]
+  },
+  {
+    "company": "Bangkit Academy",
+    "title": "Cloud Engineer",
+    "type": "Bootcamp",
+    "date": "2020 - 2021",
+    "location": "Online",
+    "description": "An intensive program focused on cloud computing principles and technologies using Google Cloud Platform (GCP). Covered topics in cloud architecture, containerization with Docker, and automation scripting with Python.",
+    "achievements": [
+      "Successfully deployed Python applications on Google Cloud Platform services like App Engine and Cloud Run.",
+      "Utilized Docker to containerize applications, ensuring consistent and reproducible environments for development and deployment.",
+      "Completed a capstone project involving the design and implementation of a scalable, cloud-native solution on GCP."
+    ],
+    "technologies": ["Python", "Google Cloud", "Docker"]
+  }
+]

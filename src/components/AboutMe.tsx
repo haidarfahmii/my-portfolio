@@ -36,13 +36,13 @@ export default function AboutMe() {
           <div className="flex flex-col gap-5">
             <h3
               className="
-                text-[22px] lg:text-[28px] font-semibold text-amber-400 mb-2.5
+                text-[22px] lg:text-[25px] font-semibold text-amber-400 mb-2.5
               "
             >
               Halo! Saya Muhammad Haidar Fahmi 👋
             </h3>
             <p className="text-[15px] lg:text-base text-slate-200 text-justify leading-[1.8]">
-              Saya adalah seorang
+              Saya adalah seorang{" "}
               <strong className="text-amber-400 font-semibold">
                 Newbie di bidang Web Developer
               </strong>{" "}

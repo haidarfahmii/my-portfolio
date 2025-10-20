@@ -84,7 +84,7 @@ export default function Nav() {
       // sebelum dianggap "aktif". Sesuaikan nilai ini (0.0 - 1.0)
       // jika Anda merasa kurang pas.
       rootMargin: "-140px 0px 0px 0px",
-      threshold: 0.4,
+      threshold: 0.2,
     };
 
     const observer = new IntersectionObserver((entries) => {
