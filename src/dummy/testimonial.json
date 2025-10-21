@@ -1,44 +1,58 @@
 [
   {
-    "name": "Sarah Johnson",
-    "title": "Product Manager @ TechStart Inc.",
-    "initials": "SJ",
+    "name": "Sarah Chen",
+    "title": "Senior Product Manager @ Innovate Solutions",
+    "initials": "SC",
     "rating": 5,
-    "quote": "Working with this developer was exceptional. They delivered high-quality code on time and exceeded our expectations. Their attention to detail and problem-solving skills are outstanding."
+    "quote": "Their full-stack expertise is invaluable. They seamlessly handled everything from the database architecture to the responsive UI. A true end-to-end problem solver."
   },
   {
-    "name": "Michael Chen",
-    "title": "CTO @ Digital Solutions",
-    "initials": "MC",
+    "name": "Mark Robinson",
+    "title": "CTO @ CloudTech Global",
+    "initials": "MR",
     "rating": 5,
-    "quote": "Incredible technical expertise and professionalism. The project was completed flawlessly with clean, maintainable code. I would definitely work with them again."
+    "quote": "One of the best full-stack developers I've worked with. Their grasp of system architecture, API design, and front-end performance is outstanding."
   },
   {
-    "name": "Emily Rodriguez",
-    "title": "UX Designer @ Creative Agency",
+    "name": "Elena Rodriguez",
+    "title": "Lead UI/UX Designer @ PixelPerfect",
     "initials": "ER",
     "rating": 5,
-    "quote": "Amazing collaboration! They perfectly translated our designs into responsive, interactive web experiences. Communication was excellent throughout the entire project."
+    "quote": "They don't just build a UI; they bring it to life by integrating it perfectly with the backend logic. Feedback was always implemented quickly and accurately."
   },
   {
-    "name": "David Park",
-    "title": "Startup Founder @ InnovateLab",
-    "initials": "DP",
-    "rating": 4,
-    "quote": "Great developer who understands both technical requirements and business needs. They helped us build a scalable platform that has been crucial to our growth."
-  },
-  {
-    "name": "Lisa Thompson",
-    "title": "Marketing Director @ Growth Co.",
-    "initials": "LT",
+    "name": "Ben Carter",
+    "title": "Engineering Manager @ LogicPoint",
+    "initials": "BC",
     "rating": 5,
-    "quote": "Outstanding work on our e-commerce platform. The site performance improved dramatically, and the user experience is now seamless across all devices."
+    "quote": "An incredibly versatile developer. They can debug a complex SQL query in the morning and optimize React components in the afternoon. A huge asset to any team."
   },
   {
-    "name": "Alex Kumar",
-    "title": "Lead Developer @ DevTeam Pro",
+    "name": "Aisha Khan",
+    "title": "Founder @ SwiftSaaS",
     "initials": "AK",
     "rating": 5,
-    "quote": "Excellent code quality and architecture decisions. They brought fresh ideas to our project and helped us implement best practices that improved our entire development workflow."
+    "quote": "Hiring them was the best decision for our startup. They built our entire MVP—from the server and database to the client-facing app. Exceptional speed and quality."
+  },
+  {
+    "name": "Kenji Tanaka",
+    "title": "Backend Lead @ DataCore",
+    "initials": "KT",
+    "rating": 4,
+    "quote": "Strong backend skills. They designed efficient database schemas and clean REST APIs. They also pitched in on the frontend when we were short-staffed."
+  },
+  {
+    "name": "Chloe Lee",
+    "title": "Senior Frontend Developer @ Vibe Media",
+    "initials": "CL",
+    "rating": 5,
+    "quote": "The APIs they build are clean, well-documented, and easy to consume. It makes my job on the frontend so much easier. A great collaborator."
+  },
+  {
+    "name": "Raj Patel",
+    "title": "DevOps Engineer @ InfraCloud",
+    "initials": "RP",
+    "rating": 4,
+    "quote": "They have a great understanding of the full application lifecycle. Their code is easy to deploy and containerize, and they write efficient, scalable backend services."
   }
 ]

@@ -3,8 +3,8 @@
 import { FiDownload } from "react-icons/fi";
 
 // components
-import SocialLinks from "@/components/SocialLinks/SocialLinks";
-import Photo from "@/components/Photo";
+import SocialLinks from "@/feature/Hero/components/SocialLinks";
+import Photo from "@/feature/Hero/components/Photo";
 
 export default function Hero() {
   return (

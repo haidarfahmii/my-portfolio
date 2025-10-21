@@ -3,7 +3,7 @@ import { JetBrains_Mono } from "next/font/google";
 import "./globals.css";
 
 //  Components
-import Header from "@/components/Header";
+import Header from "@/feature/Header/components/Header";
 import PageTransition from "@/components/PageTransition";
 import StairTransition from "@/components/StairTransition";
 
@@ -46,7 +46,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${jetbrainsMono.variable} antialiased min-w-[300px]`}>
+      <body
+        className={`${jetbrainsMono.variable} antialiased min-w-[300px]`}
+        suppressHydrationWarning={true}
+      >
         <Header />
         <StairTransition />
         <PageTransition>{children}</PageTransition>

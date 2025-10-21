@@ -5,7 +5,7 @@
     "tags": ["HTML", "Next.js", "TypeScript", "Tailwind CSS", "Figma"],
     "imageUrl": "/images/project.png",
     "isFeatured": true,
-    "liveLink": "#",
+    "liveLink": "https://example.com/todo-app",
     "githubLink": "#"
   },
   {
@@ -14,7 +14,7 @@
     "tags": ["React", "Node.js", "MongoDB", "Stripe", "Tailwind CSS"],
     "imageUrl": "/images/project.png",
     "isFeatured": false,
-    "liveLink": "#",
+    "liveLink": "https://example.com/ecommerce-platform",
     "githubLink": "#"
   },
   {
@@ -23,7 +23,7 @@
     "tags": ["Vue.js", "Express", "Socket.io", "PostgreSQL", "Docker"],
     "imageUrl": "/images/project.png",
     "isFeatured": false,
-    "liveLink": "#",
+    "liveLink": "https://example.com/task-management-app",
     "githubLink": "#"
   }
 ]

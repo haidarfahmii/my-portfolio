@@ -28,11 +28,6 @@ const socialLinks = [
     icon: <FaLinkedin />,
     label: "LinkedIn",
   },
-  {
-    href: "https://www.youtube.com/@HexosGaming",
-    icon: <FaYoutube />,
-    label: "YouTube",
-  },
 ];
 
 export default function SocialLinks() {

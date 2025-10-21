@@ -1,42 +1,82 @@
-[
-  {
-    "name": "HTML",
-    "iconUrl": "/icons/html.svg"
-  },
-  {
-    "name": "CSS",
-    "iconUrl": "/icons/css.svg"
-  },
-  {
-    "name": "JavaScript",
-    "iconUrl": "/icons/javascript.svg"
-  },
-  {
-    "name": "React JS",
-    "iconUrl": "/icons/reactjs.svg"
-  },
-  {
-    "name": "Svelte JS",
-    "iconUrl": "/icons/svelte.svg"
-  },
-  {
-    "name": "Next.js",
-    "iconUrl": "/icons/nextjs.svg"
-  },
-  {
-    "name": "VS Code",
-    "iconUrl": "/icons/vscode.svg"
-  },
-  {
-    "name": "Postman",
-    "iconUrl": "/icons/postman.svg"
-  },
-  {
-    "name": "Gitlab",
-    "iconUrl": "/icons/gitlab.svg"
-  },
-  {
-    "name": "GitHub",
-    "iconUrl": "/icons/github.svg"
+{
+  "skills": {
+    "Frontend": [
+      {
+        "name": "HTML5",
+        "iconUrl": "/icons/html.svg"
+      },
+      {
+        "name": "CSS3",
+        "iconUrl": "/icons/css.svg"
+      },
+      {
+        "name": "JavaScript",
+        "iconUrl": "/icons/javascript.svg"
+      },
+      {
+        "name": "Next JS",
+        "iconUrl": "/icons/nextjs.svg"
+      },
+      {
+        "name": "Tailwind",
+        "iconUrl": "/icons/tailwind.svg"
+      },
+      {
+        "name": "TypeScript",
+        "iconUrl": "/icons/typescript.svg"
+      }
+    ],
+    "Backend": [
+      {
+        "name": "Node JS",
+        "iconUrl": "/icons/nodejs.svg"
+      },
+      {
+        "name": "Python",
+        "iconUrl": "/icons/python.svg"
+      },
+      {
+        "name": "Go",
+        "iconUrl": "/icons/go.svg"
+      },
+      {
+        "name": "PostgreSQL",
+        "iconUrl": "/icons/postgresql.svg"
+      },
+      {
+        "name": "MongoDB",
+        "iconUrl": "/icons/mongodb.svg"
+      },
+      {
+        "name": "Express.js",
+        "iconUrl": "/icons/expressjs.svg"
+      }
+    ],
+    "Tools": [
+      {
+        "name": "Git",
+        "iconUrl": "/icons/github.svg"
+      },
+      {
+        "name": "Docker",
+        "iconUrl": "/icons/docker.svg"
+      },
+      {
+        "name": "VS Code",
+        "iconUrl": "/icons/vscode.svg"
+      },
+      {
+        "name": "Postman",
+        "iconUrl": "/icons/postman.svg"
+      },
+      {
+        "name": "Figma",
+        "iconUrl": "/icons/figma.svg"
+      },
+      {
+        "name": "npm",
+        "iconUrl": "/icons/npm.svg"
+      }
+    ]
   }
-]
+}

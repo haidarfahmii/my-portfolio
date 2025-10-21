@@ -1,6 +1,6 @@
 import Link from "next/link";
-import Nav from "./Nav";
-import MobileNav from "./MobileNav";
+import Nav from "@/feature/Navigation/components/Nav";
+import MobileNav from "@/feature/Navigation/components/MobileNav";
 
 export default function Header() {
   return (
