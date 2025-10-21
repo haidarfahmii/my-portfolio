@@ -5,10 +5,9 @@ import Link from "next/link";
 import React from "react";
 import { FaExternalLinkAlt, FaGithub } from "react-icons/fa";
 
-// 1. Impor data dari file JSON
+// ambil data json
 import projects from "@/dummy/project.json";
 
-// 2. Definisikan Tipe data untuk project (Best Practice)
 interface Project {
   title: string;
   description: string;
@@ -19,7 +18,7 @@ interface Project {
   githubLink: string;
 }
 
-// Komponen Kartu Proyek
+// Komponen project card
 const ProjectCard = ({ project }: { project: Project }) => {
   return (
     <div className="bg-[#2c2c32] rounded-xl overflow-hidden border border-gray-700 hover:border-amber-400/50 transition-all duration-300 flex flex-col shadow-lg">
@@ -83,7 +82,7 @@ export default function Project() {
       <div className="container mx-auto max-w-[1400px] px-5 lg:px-10">
         <div className="text-center mb-4">
           <span className="text-md font-semibold text-gray-400 tracking-widest uppercase">
-            PROJECTS
+            projects
           </span>
         </div>
         <h2 className="text-center text-3xl lg:text-5xl font-bold text-amber-400 mb-5 [text-shadow:0_0_20px_rgba(251,191,36,0.3)]">

@@ -1,0 +1,44 @@
+[
+  {
+    "name": "Sarah Johnson",
+    "title": "Product Manager @ TechStart Inc.",
+    "initials": "SJ",
+    "rating": 5,
+    "quote": "Working with this developer was exceptional. They delivered high-quality code on time and exceeded our expectations. Their attention to detail and problem-solving skills are outstanding."
+  },
+  {
+    "name": "Michael Chen",
+    "title": "CTO @ Digital Solutions",
+    "initials": "MC",
+    "rating": 5,
+    "quote": "Incredible technical expertise and professionalism. The project was completed flawlessly with clean, maintainable code. I would definitely work with them again."
+  },
+  {
+    "name": "Emily Rodriguez",
+    "title": "UX Designer @ Creative Agency",
+    "initials": "ER",
+    "rating": 5,
+    "quote": "Amazing collaboration! They perfectly translated our designs into responsive, interactive web experiences. Communication was excellent throughout the entire project."
+  },
+  {
+    "name": "David Park",
+    "title": "Startup Founder @ InnovateLab",
+    "initials": "DP",
+    "rating": 4,
+    "quote": "Great developer who understands both technical requirements and business needs. They helped us build a scalable platform that has been crucial to our growth."
+  },
+  {
+    "name": "Lisa Thompson",
+    "title": "Marketing Director @ Growth Co.",
+    "initials": "LT",
+    "rating": 5,
+    "quote": "Outstanding work on our e-commerce platform. The site performance improved dramatically, and the user experience is now seamless across all devices."
+  },
+  {
+    "name": "Alex Kumar",
+    "title": "Lead Developer @ DevTeam Pro",
+    "initials": "AK",
+    "rating": 5,
+    "quote": "Excellent code quality and architecture decisions. They brought fresh ideas to our project and helped us implement best practices that improved our entire development workflow."
+  }
+]

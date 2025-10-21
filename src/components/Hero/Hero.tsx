@@ -8,7 +8,7 @@ import Photo from "@/components/Photo";
 
 export default function Hero() {
   return (
-    <section id="#home" className="min-h-screen h-full flex items-center">
+    <section id="#home" className="min-h-screen h-full flex items-center pt-15">
       <div className="container mx-auto h-full lg:max-w-[1400px] px-5 lg:px-10">
         <div className="flex flex-col lg:flex-row items-center justify-between">
           {/* text */}

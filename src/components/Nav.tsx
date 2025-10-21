@@ -31,7 +31,7 @@ const links: { name: string; path: string }[] = [
   },
   {
     name: "contact",
-    path: "/contact",
+    path: "#contact",
   },
 ];
 
@@ -61,8 +61,7 @@ export default function Nav() {
       return;
     }
 
-    // 1. Dapatkan daftar ID section dari 'links'
-    // Kita tambahkan "home" secara manual (dari Langkah 1)
+    // Dapatkan daftar ID section dari 'links'
     const sectionIds = [
       "home",
       ...links
@@ -71,18 +70,15 @@ export default function Nav() {
         .map((path) => path.substring(1)), // Ambil "about" dari "/#about"
     ];
 
-    // 2. Dapatkan elemen section-nya
+    // Dapatkan elemen section-nya
     const sections = sectionIds
       .map((id) => document.getElementById(id))
       .filter((el) => el !== null) as HTMLElement[];
 
     if (sections.length === 0) return;
 
-    // 3. Buat Observer
+    // Buat Observer
     const observerOptions = {
-      // 'threshold: 0.4' berarti 40% dari section harus terlihat
-      // sebelum dianggap "aktif". Sesuaikan nilai ini (0.0 - 1.0)
-      // jika Anda merasa kurang pas.
       rootMargin: "-140px 0px 0px 0px",
       threshold: 0.2,
     };
@@ -93,16 +89,15 @@ export default function Nav() {
           // Saat section masuk ke layar, update hash aktif
           setActiveHash("#" + entry.target.id);
         } else {
-          // 2. Elemen KELUAR dari area pandang
+          // saat elemen keluar dari pandangan
           const leavingId = "#" + entry.target.id;
 
           // Periksa apakah elemen yang keluar adalah yang sedang aktif
-          // Ini penting agar kita hanya bereaksi saat scroll ke atas
           if (leavingId === activeHash) {
             // Temukan index dari section yang keluar
             const currentIndex = sectionIds.indexOf(entry.target.id);
             if (currentIndex > 0) {
-              // Aktifkan section SEBELUMNYA
+              // Aktifkan section sebelumnya
               const prevSectionId = sectionIds[currentIndex - 1];
               setActiveHash("#" + prevSectionId);
             }
@@ -111,10 +106,10 @@ export default function Nav() {
       });
     }, observerOptions);
 
-    // 4. Amati setiap section
+    // untuk amati setiap section
     sections.forEach((section) => observer.observe(section));
 
-    // 5. Cleanup
+    // di Cleanup
     return () => {
       sections.forEach((section) => observer.unobserve(section));
     };

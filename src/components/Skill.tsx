@@ -3,10 +3,9 @@
 import React from "react";
 import Image from "next/image";
 
-// 1. Impor data dari file JSON
+// import data json
 import skills from "@/dummy/skill.json";
 
-// 2. Definisikan Tipe data
 interface Skill {
   name: string;
   iconUrl: string;
@@ -14,13 +13,11 @@ interface Skill {
 
 export default function Skill() {
   return (
-    // Tambahkan id="skills" dan scroll-mt untuk scrollspy
     <section
       id="skills"
       className="py-10 md:py-20 scroll-mt-[140px] min-h-screen h-full flex items-center"
     >
       <div className="container mx-auto max-w-4xl px-5 lg:px-10">
-        {/* === Bagian Judul (dari gambar 2) === */}
         <div className="text-center mb-4">
           <span className="text-md font-semibold text-gray-400 tracking-widest uppercase">
             SKILLS & TOOLS
@@ -33,10 +30,9 @@ export default function Skill() {
           A comprehensive overview of my technical skills and expertise areas,
           from frontend frameworks to backend.
         </p>
-        {/* Divider */}
+        
         <div className="w-[100px] h-1 bg-gradient-to-r from-transparent via-amber-400 to-transparent mx-auto mb-[60px] rounded-[2px]"></div>
 
-        {/* === Grid Konten (dari gambar 1) === */}
         <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6">
           {(skills as Skill[]).map((skill) => (
             <div
@@ -48,9 +44,9 @@ export default function Skill() {
               <Image
                 src={skill.iconUrl}
                 alt={`${skill.name} logo`}
-                width={56} // 56px (w-14)
-                height={56} // 56px (h-14)
-                className="h-14 w-14 object-contain" // object-contain agar SVG tidak terdistorsi
+                width={56} 
+                height={56} 
+                className="h-14 w-14 object-contain"
               />
               <p className="text-sm font-medium text-gray-200">{skill.name}</p>
             </div>

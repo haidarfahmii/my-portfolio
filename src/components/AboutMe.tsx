@@ -32,7 +32,7 @@ export default function AboutMe() {
             lg:grid-cols-2 lg:gap-[60px]
           "
         >
-          {/* Left Column - Text Content */}
+          {/* Left Column */}
           <div className="flex flex-col gap-5">
             <h3
               className="
@@ -75,7 +75,7 @@ export default function AboutMe() {
             <div className="grid grid-cols-1 gap-5 mt-[30px] lg:grid-cols-3">
               <div
                 className="
-                  flex flex-col md:flex-row items-center text-center md:text-left
+                  flex flex-col lg:flex-row items-center text-center lg:text-left
                   gap-3 bg-amber-400/10 p-5 rounded-2xl 
                   border-2 border-amber-400/30
                   transition-all duration-300 ease-in-out
@@ -83,8 +83,8 @@ export default function AboutMe() {
                   hover:shadow-[0_5px_15px_rgba(251,191,36,0.3)]
                 "
               >
-                <span className="text-3xl">💼</span>
-                <div>
+                <span className="text-3xl lg:text-2xl">💼</span>
+                <div className="min-w-0 shrink">
                   <h4 className="text-lg text-amber-400 m-0">1+ Years</h4>
                   <p className="text-sm text-slate-400 m-0">Experience</p>
                 </div>
@@ -92,7 +92,7 @@ export default function AboutMe() {
 
               <div
                 className="
-                  flex flex-col md:flex-row items-center text-center md:text-left
+                  flex flex-col lg:flex-row items-center text-center lg:text-left
                   gap-3 bg-amber-400/10 p-5 rounded-2xl 
                   border-2 border-amber-400/30
                   transition-all duration-300 ease-in-out
@@ -100,8 +100,8 @@ export default function AboutMe() {
                   hover:shadow-[0_5px_15px_rgba(251,191,36,0.3)]
                 "
               >
-                <span className="text-3xl">🚀</span>
-                <div>
+                <span className="text-3xl lg:text-2xl">🚀</span>
+                <div className="min-w-0 shrink">
                   <h4 className="text-lg text-amber-400 m-0">5+ Projects</h4>
                   <p className="text-sm text-slate-400 m-0">Completed</p>
                 </div>
@@ -109,7 +109,7 @@ export default function AboutMe() {
 
               <div
                 className="
-                  flex flex-col md:flex-row items-center text-center md:text-left
+                  flex flex-col lg:flex-row items-center text-center lg:text-left
                   gap-3 bg-amber-400/10 p-5 rounded-2xl 
                   border-2 border-amber-400/30
                   transition-all duration-300 ease-in-out
@@ -117,8 +117,8 @@ export default function AboutMe() {
                   hover:shadow-[0_5px_15px_rgba(251,191,36,0.3)]
                 "
               >
-                <span className="text-3xl">🎓</span>
-                <div>
+                <span className="text-3xl lg:text-2xl">🎓</span>
+                <div className="min-w-0 shrink">
                   <h4 className="text-lg text-amber-400 m-0">Lulusan S1</h4>
                   <p className="text-sm text-slate-400 m-0">
                     Teknik Informatika
@@ -148,23 +148,9 @@ export default function AboutMe() {
                 alt="Haidar Fahmi"
                 width={400}
                 height={500}
-                // .image
                 className="w-full h-full object-cover rounded-2xl"
               />
             </div>
-
-            {/* <div
-              className="
-                absolute bottom-5 -left-5 bg-emerald-500 text-white 
-                py-[15px] px-[25px] rounded-full flex items-center 
-                gap-2.5 font-semibold 
-                shadow-[0_5px_15px_rgba(16,185,129,0.4)]
-                animate-[pulse_2s_ease-in-out_infinite]
-              "
-            >
-              <span className="text-xl">✨</span>
-              <span>Available for Freelance</span>
-            </div> */}
           </div>
         </div>
       </div>

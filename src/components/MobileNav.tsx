@@ -33,7 +33,7 @@ const links: { name: string; path: string }[] = [
   },
   {
     name: "contact",
-    path: "/contact",
+    path: "#contact",
   },
 ];
 
@@ -79,10 +79,10 @@ export default function MobileNav() {
     const observer = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
-          // Elemen MASUK
+          // elemen masuk
           setActiveHash("#" + entry.target.id);
         } else {
-          // Elemen KELUAR (untuk scroll ke atas)
+          // elemen keluar misal saat kita kembali scroll ke atas
           const leavingId = "#" + entry.target.id;
           if (leavingId === activeHash) {
             const currentIndex = sectionIds.indexOf(entry.target.id);
