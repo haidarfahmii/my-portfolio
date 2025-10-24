@@ -13,6 +13,7 @@ import contactInfo from "@/dummy/contact.json";
 
 // Impor komponen SocialLinks
 import SocialLinks from "@/features/Hero/components/SocialLinks";
+import ContactForm from "@/components/ContactForm";
 
 // Definisikan Tipe data
 interface ContactInfo {
@@ -64,8 +65,8 @@ export default function Contact() {
               Fill out the form below and I'll get back to you as soon as
               possible.
             </p>
-
-            <form className="space-y-4">
+            <ContactForm />
+            {/* <form className="space-y-4">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <div>
                   <label
@@ -135,7 +136,7 @@ export default function Contact() {
                 <FaPaperPlane size={14} />
                 Send Message
               </button>
-            </form>
+            </form> */}
           </div>
 
           {/* Kartu "Get In Touch" */}

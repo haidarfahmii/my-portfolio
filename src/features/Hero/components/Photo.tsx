@@ -92,7 +92,6 @@ export default function Photo() {
             <Image
               src="/images/photo.jpg"
               priority
-              quality={100}
               fill
               alt=""
               className="object-cover object-top rounded-2xl"

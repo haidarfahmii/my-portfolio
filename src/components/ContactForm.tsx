@@ -1,9 +1,5 @@
-// components/shared/ContactForm.tsx
-"use client";
-
-import { useState } from "react";
 import { LuSend } from "react-icons/lu";
-import axios, { isAxiosError } from "axios";
+import useFormContact from "@/features/Contact/hooks/useFormContact";
 
 interface ContactFormProps {
   variant?: "modal" | "section";
@@ -14,90 +10,67 @@ export default function ContactForm({
   variant = "section",
   onFormSubmit,
 }: ContactFormProps) {
-  const [name, setName] = useState<string>("");
-  const [email, setEmail] = useState<string>("");
-  const [subject, setSubject] = useState<string>("");
-  const [message, setMessage] = useState<string>("");
-  const [status, setStatus] = useState<
-    "idle" | "loading" | "success" | "error"
-  >("idle");
-  const [feedback, setFeedback] = useState<string>("");
+  const { formik, status, feedback } = useFormContact({
+    variant,
+    onFormSubmit,
+  });
 
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    setStatus("loading");
-    setFeedback("");
-
-    const payload = {
-      name,
-      email,
-      subject,
-      message,
-    };
-
-    try {
-      const response = await axios.post("/api/contact", payload);
-
-      setStatus("success");
-      setFeedback("Pesan terkirim! Saya akan segera menghubungi Anda.");
-      setName("");
-      setEmail("");
-      setSubject("");
-      setMessage("");
-
-      if (onFormSubmit) {
-        onFormSubmit();
-      }
-    } catch (error) {
-      setStatus("error");
-
-      //   pengecekan error
-      if (isAxiosError(error) && error.response) {
-        // ambil pesan error dari API route
-        setFeedback(error.response.data.message);
-      } else {
-        // Error network
-        setFeedback("Tidak bisa terhubung ke server. Coba lagi nanti...");
-      }
-    }
-  };
+  // Tentukan kelas CSS berdasarkan variant
+  const labelColorClass =
+    variant === "section" ? "text-gray-300" : "text-gray-700";
+  const inputClasses =
+    variant === "section"
+      ? "w-full p-3 rounded-md bg-[#1c1c22] border border-gray-700 focus:outline-none focus:border-amber-400 transition-colors text-white"
+      : "w-full rounded-md border border-gray-300 p-3 shadow-sm focus:border-blue-500 focus:ring-blue-500 text-gray-900";
+  const buttonClasses =
+    variant === "section"
+      ? "inline-flex items-center gap-2 rounded-lg bg-amber-600 py-3 px-5 font-medium text-slate-800 shadow-md transition hover:bg-amber-500 disabled:cursor-not-allowed disabled:opacity-50"
+      : "inline-flex items-center gap-2 rounded-lg bg-slate-600 py-3 px-5 font-medium text-white shadow-md transition hover:bg-slate-800 disabled:cursor-not-allowed disabled:opacity-50";
 
   return (
-    <form onSubmit={handleSubmit} className="flex flex-col gap-4">
+    <form onSubmit={formik.handleSubmit} className="flex flex-col gap-4">
       {/* name */}
       <div>
         <label
           htmlFor="name"
-          className="mb-1 block text-sm font-medium text-gray-700"
+          className={`mb-1 block text-sm font-medium ${labelColorClass}`}
         >
           Name
         </label>
         <input
           type="text"
           id="name"
-          value={name}
-          onChange={(e) => setName(e.target.value)}
-          required
-          className="w-full rounded-md border border-gray-300 p-3 shadow-sm focus:border-blue-500 focus:ring-blue-500"
+          name="name"
+          value={formik.values.name}
+          onChange={formik.handleChange}
+          onBlur={formik.handleBlur}
+          className={inputClasses}
         />
+        {formik.touched.name && formik.errors.name && (
+          <p className="mt-1 text-sm text-red-600">{formik.errors.name}</p>
+        )}
       </div>
 
       {/* email */}
       <div>
         <label
           htmlFor="email"
-          className="mb-1 block text-sm font-medium text-gray-700"
+          className={`mb-1 block text-sm font-medium ${labelColorClass}`}
         >
           Email
         </label>
         <input
           type="email"
           id="email"
-          value={email}
-          onChange={(e) => setEmail(e.target.value)}
-          required
-          className="w-full rounded-md border border-gray-300 p-3 shadow-sm focus:border-blue-500 focus:ring-blue-500"
+          name="email"
+          value={formik.values.email}
+          onChange={formik.handleChange}
+          onBlur={formik.handleBlur}
+          className={inputClasses}
         />
+        {formik.touched.email && formik.errors.email && (
+          <p className="mt-1 text-sm text-red-600">{formik.errors.email}</p>
+        )}
       </div>
 
       {/* subject */}
@@ -105,18 +78,22 @@ export default function ContactForm({
         <div>
           <label
             htmlFor="subject"
-            className="mb-1 block text-sm font-medium text-gray-700"
+            className={`mb-1 block text-sm font-medium ${labelColorClass}`}
           >
             Subject
           </label>
           <input
             type="text"
             id="subject"
-            value={subject}
-            onChange={(e) => setSubject(e.target.value)}
-            required
-            className="w-full rounded-md border border-gray-300 p-3 shadow-sm focus:border-blue-500 focus:ring-blue-500"
+            name="subject"
+            value={formik.values.subject}
+            onChange={formik.handleChange}
+            onBlur={formik.handleBlur}
+            className={inputClasses}
           />
+          {formik.touched.subject && formik.errors.subject && (
+            <p className="mt-1 text-sm text-red-600">{formik.errors.subject}</p>
+          )}
         </div>
       )}
 
@@ -124,33 +101,37 @@ export default function ContactForm({
       <div>
         <label
           htmlFor="message"
-          className="mb-1 block text-sm font-medium text-gray-700"
+          className={`mb-1 block text-sm font-medium ${labelColorClass}`}
         >
           Message
         </label>
         <textarea
           id="message"
+          name="message"
           rows={4}
-          value={message}
-          onChange={(e) => setMessage(e.target.value)}
-          required
-          className="w-full rounded-md border border-gray-300 p-3 shadow-sm focus:border-blue-500 focus:ring-blue-500"
+          value={formik.values.message}
+          onChange={formik.handleChange}
+          onBlur={formik.handleBlur}
+          className={inputClasses}
         />
+        {formik.touched.message && formik.errors.message && (
+          <p className="mt-1 text-sm text-red-600">{formik.errors.message}</p>
+        )}
       </div>
 
       {/* button submit */}
       <div className="flex items-center justify-between">
         <button
           type="submit"
-          disabled={status === "loading"}
-          className="inline-flex items-center gap-2 rounded-lg bg-blue-600 py-3 px-5 font-medium text-white shadow-md transition hover:bg-blue-700 disabled:cursor-not-allowed disabled:opacity-50"
+          disabled={formik.isSubmitting}
+          className={buttonClasses}
         >
-          {status === "loading" ? "Sending..." : "Send Message"}
+          {formik.isSubmitting ? "Sending..." : "Send Message"}
           <LuSend size={18} />
         </button>
       </div>
 
-      {/* feedback */}
+      {/* feedback (Ini tetap sama, karena kita teruskan 'status' dan 'feedback' dari hook) */}
       {feedback && (
         <p
           className={`mt-2 text-sm ${

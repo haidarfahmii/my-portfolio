@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { FiDownload } from "react-icons/fi";
 import CVModal from "@/components/modals/CVModal";
+import ContactModal from "@/components/modals/ContactModal";
 
 // components
 import SocialLinks from "@/features/Hero/components/SocialLinks";
@@ -10,9 +11,14 @@ import Photo from "@/features/Hero/components/Photo";
 
 export default function Hero() {
   const [isCVModalOpen, setIsCVModalOpen] = useState<boolean>(false);
+  const [isContactModalOpen, setIsContactModalOpen] = useState<boolean>(false);
   return (
     <>
       <CVModal isOpen={isCVModalOpen} onClose={() => setIsCVModalOpen(false)} />
+      <ContactModal
+        isOpen={isContactModalOpen}
+        onClose={() => setIsContactModalOpen}
+      />
 
       <section
         id="#home"

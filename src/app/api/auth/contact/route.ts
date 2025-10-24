@@ -1,18 +1,19 @@
 import Backendless from "@/utils/backendless";
-import { NextResponse } from "next/server";
+import { NextResponse, NextRequest } from "next/server";
 
-export async function POST(request: Request) {
+export async function POST(request: NextRequest) {
   try {
     const { name, email, message, subject } = await request.json();
 
     if (!name || !email || !message || !subject) {
-      return NextResponse.json(
-        { error: "Nama, email, subject dan pesan harus diisi" },
-        { status: 400 }
-      );
+      return NextResponse.json({
+        success: false,
+        message: "Nama, email, subject dan pesan harus diisi",
+        data: null,
+      });
     }
 
-    const savedMessage = await Backendless.Data.of("ContactMessage").save({
+    const response = await Backendless.Data.of("ContactMessages").save({
       name,
       email,
       message,
@@ -22,17 +23,17 @@ export async function POST(request: Request) {
       {
         success: true,
         message: "Pesan berhasil di kirim",
-        data: savedMessage,
+        data: response,
       },
       {
         status: 201,
       }
     );
-  } catch (error) {
+  } catch (error: any) {
     return NextResponse.json(
       {
         success: false,
-        message: "Gagal mengirim pesan, Coba lagi nanti...",
+        message: error.message || "Gagal mengirim pesan, Coba lagi nanti...",
       },
       {
         status: 500,
