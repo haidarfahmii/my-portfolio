@@ -1,6 +1,6 @@
 import Link from "next/link";
-import Nav from "@/feature/Navigation/components/Nav";
-import MobileNav from "@/feature/Navigation/components/MobileNav";
+import Nav from "@/features/Navigation/components/Nav";
+import MobileNav from "@/features/Navigation/components/MobileNav";
 
 export default function Header() {
   return (
@@ -14,10 +14,10 @@ export default function Header() {
         </Link>
 
         {/* desktop nav & hire me button*/}
-        <div className="hidden lg:flex items-center gap-8">
+        <div className="hidden lg:flex items-center gap-4">
           <Nav />
           <Link href="/contact">
-            <button className="bg-amber-600 hover:bg-amber-500 text-slate-800 rounded-md py-1.5 px-3.5 font-bold cursor-pointer  shadow-md hover:shadow-amber-400/80 hover:scale-105 transition-all duration-300 ease-in-out">
+            <button className="bg-amber-600 hover:bg-amber-500 text-slate-800 rounded-md py-1 px-2 font-bold cursor-pointer shadow-md hover:shadow-amber-400/80 hover:scale-105 transition-all duration-300 ease-in-out">
               Hire me
             </button>
           </Link>

@@ -116,7 +116,7 @@ export default function Nav() {
   }, [pathName, activeHash]);
 
   return (
-    <nav className="flex gap-6">
+    <nav className="flex gap-4">
       {links.map((link, index) => {
         // menentukan link aktif
         const isActive = () => {

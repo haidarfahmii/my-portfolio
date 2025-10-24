@@ -12,7 +12,7 @@ import {
 import contactInfo from "@/dummy/contact.json";
 
 // Impor komponen SocialLinks
-import SocialLinks from "@/feature/Hero/components/SocialLinks";
+import SocialLinks from "@/features/Hero/components/SocialLinks";
 
 // Definisikan Tipe data
 interface ContactInfo {
