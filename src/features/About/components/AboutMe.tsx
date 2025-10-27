@@ -18,7 +18,7 @@ export default function AboutMe() {
           About Me
         </h2>
 
-        {/* .divider */}
+        {/* divider */}
         <div
           className="
             w-[100px] h-1 bg-gradient-to-r from-transparent via-amber-400 to-transparent
@@ -32,7 +32,7 @@ export default function AboutMe() {
             lg:grid-cols-2 lg:gap-[60px]
           "
         >
-          {/* Left Column */}
+          {/* kolom kiri */}
           <div className="flex flex-col gap-5">
             <h3
               className="
@@ -76,59 +76,57 @@ export default function AboutMe() {
               <div
                 className="
                   flex flex-col lg:flex-row items-center text-center lg:text-left
-                  gap-3 bg-amber-400/10 p-5 rounded-2xl 
+                  gap-3 bg-amber-400/10 p-3 rounded-2xl 
                   border-2 border-amber-400/30
                   transition-all duration-300 ease-in-out
                   hover:-translate-y-[5px] hover:border-amber-400 
                   hover:shadow-[0_5px_15px_rgba(251,191,36,0.3)]
                 "
               >
-                <span className="text-3xl lg:text-2xl">💼</span>
+                <span className="text-3xl lg:text-xl">💼</span>
                 <div className="min-w-0 shrink">
-                  <h4 className="text-lg text-amber-400 m-0">1+ Years</h4>
-                  <p className="text-sm text-slate-400 m-0">Experience</p>
+                  <h4 className="text-md text-amber-400 m-0 ">1 Years</h4>
+                  <p className="text-sm text-slate-400 m-0 ">Experience</p>
                 </div>
               </div>
 
               <div
                 className="
                   flex flex-col lg:flex-row items-center text-center lg:text-left
-                  gap-3 bg-amber-400/10 p-5 rounded-2xl 
+                  gap-3 bg-amber-400/10 p-3 rounded-2xl 
                   border-2 border-amber-400/30
                   transition-all duration-300 ease-in-out
                   hover:-translate-y-[5px] hover:border-amber-400 
                   hover:shadow-[0_5px_15px_rgba(251,191,36,0.3)]
                 "
               >
-                <span className="text-3xl lg:text-2xl">🚀</span>
+                <span className="text-3xl lg:text-xl">🚀</span>
                 <div className="min-w-0 shrink">
-                  <h4 className="text-lg text-amber-400 m-0">5+ Projects</h4>
-                  <p className="text-sm text-slate-400 m-0">Completed</p>
+                  <h4 className="text-md text-amber-400 m-0 ">3 Projects</h4>
+                  <p className="text-sm text-slate-400 m-0 ">Completed</p>
                 </div>
               </div>
 
               <div
                 className="
                   flex flex-col lg:flex-row items-center text-center lg:text-left
-                  gap-3 bg-amber-400/10 p-5 rounded-2xl 
+                  gap-3 bg-amber-400/10 p-3 rounded-2xl 
                   border-2 border-amber-400/30
                   transition-all duration-300 ease-in-out
                   hover:-translate-y-[5px] hover:border-amber-400 
                   hover:shadow-[0_5px_15px_rgba(251,191,36,0.3)]
                 "
               >
-                <span className="text-3xl lg:text-2xl">🎓</span>
+                <span className="text-3xl lg:text-xl">🎓</span>
                 <div className="min-w-0 shrink">
-                  <h4 className="text-lg text-amber-400 m-0">Lulusan S1</h4>
-                  <p className="text-sm text-slate-400 m-0">
-                    Teknik Informatika
-                  </p>
+                  <h4 className="text-md text-amber-400 m-0 ">GPA</h4>
+                  <p className="text-sm text-slate-400 m-0 ">3.85/4.00</p>
                 </div>
               </div>
             </div>
           </div>
 
-          {/* Right Column - Image */}
+          {/* kolom kanan */}
           <div
             className="
               relative flex justify-center items-center order-first lg:order-none
@@ -144,11 +142,11 @@ export default function AboutMe() {
               "
             >
               <Image
-                src="/images/profile.jpg"
+                src="/images/photo.jpg"
                 alt="Haidar Fahmi"
                 width={400}
-                height={500}
-                className="w-full h-full object-cover rounded-2xl"
+                height={400}
+                className="w-full h-full object-cover object-top rounded-2xl"
               />
             </div>
           </div>

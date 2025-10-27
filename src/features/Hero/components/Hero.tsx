@@ -30,7 +30,7 @@ export default function Hero() {
             <div className="text-center lg:text-left order-2 lg:order-none">
               <div className="inline-flex items-center gap-2 bg-amber-400/20 border border-amber-400 py-1 px-3 rounded-full mb-3 text-sm lg:text-md">
                 <span>👨‍💻</span>
-                <span>Newbie Web Developer</span>
+                <span>Full-stack Web Developer</span>
               </div>
               <h1 className="h1 mb-6">
                 Hello I'm <br />

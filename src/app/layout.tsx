@@ -5,7 +5,8 @@ import "./globals.css";
 //  Components
 import Header from "@/features/Header/components/Header";
 import PageTransition from "@/components/PageTransition";
-import StairTransition from "@/components/StairTransition";
+import Footer from "@/features/Footer/components/Footer";
+import ScrollToTop from "@/components/ScrollToTop";
 
 const jetbrainsMono = JetBrains_Mono({
   weight: ["100", "200", "300", "400", "500", "600", "700", "800"],
@@ -41,8 +42,9 @@ export default function RootLayout({
         suppressHydrationWarning={true}
       >
         <Header />
-        <StairTransition />
         <PageTransition>{children}</PageTransition>
+        <Footer />
+        <ScrollToTop />
       </body>
     </html>
   );

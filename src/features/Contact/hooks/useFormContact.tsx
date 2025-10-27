@@ -1,26 +1,12 @@
-// features/contact/hooks/useFormContact.tsx
 "use client";
 
 import { useState } from "react";
 import { useFormik } from "formik";
-import * as Yup from "yup";
-import { axiosInstance } from "@/utils/axios-instance";
+import { axiosInstance } from "@/services/axios-instance";
 import { isAxiosError } from "axios";
+import { contactValidationSchema } from "@/features/Contact/schema/contactValidationSchema";
 
-const getValidationSchema = (variant: "modal" | "section") =>
-  Yup.object({
-    name: Yup.string().required("Nama wajib diisi"),
-    email: Yup.string()
-      .email("Format email tidak valid")
-      .required("Email wajib diisi"),
-    subject:
-      variant === "section"
-        ? Yup.string().required("Subjek wajib diisi")
-        : Yup.string(), // Tidak wajib jika di modal
-    message: Yup.string().required("Pesan wajib diisi"),
-  });
-
-// Tipe props untuk hook
+// props untuk hook
 interface UseFormContactProps {
   variant?: "modal" | "section";
   onFormSubmit?: () => void;
@@ -40,12 +26,11 @@ export default function useFormContact({
       subject: "",
       message: "",
     },
-    validationSchema: getValidationSchema(variant),
+    validationSchema: contactValidationSchema(variant),
     onSubmit: async (values, { setSubmitting, resetForm }) => {
       setStatus("idle");
       setFeedback("");
 
-      // Buat payload
       const client = {
         name: values.name,
         email: values.email,
@@ -54,9 +39,9 @@ export default function useFormContact({
       };
 
       try {
-        await axiosInstance.post("/api/auth/contact", client);
+        await axiosInstance.post("/api/contact", client);
 
-        // Sukses
+        // sukses
         setStatus("success");
         setFeedback("Pesan terkirim! Saya akan segera menghubungi Anda.");
         resetForm();
@@ -64,7 +49,7 @@ export default function useFormContact({
           onFormSubmit();
         }
       } catch (error) {
-        // Error
+        // error
         setStatus("error");
         if (isAxiosError(error) && error.response) {
           setFeedback(

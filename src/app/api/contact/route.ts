@@ -1,14 +1,14 @@
-import Backendless from "@/utils/backendless";
+import Backendless from "@/services/backendless";
 import { NextResponse, NextRequest } from "next/server";
 
 export async function POST(request: NextRequest) {
   try {
     const { name, email, message, subject } = await request.json();
 
-    if (!name || !email || !message || !subject) {
+    if (!name || !email || !message) {
       return NextResponse.json({
         success: false,
-        message: "Nama, email, subject dan pesan harus diisi",
+        message: "Nama, email, pesan harus diisi",
         data: null,
       });
     }

@@ -1,4 +1,7 @@
+"use client";
+
 import { MdClose } from "react-icons/md";
+import { useEffect } from "react";
 
 interface ModalProps {
   isOpen: boolean;
@@ -7,6 +10,18 @@ interface ModalProps {
 }
 
 export default function Modal({ isOpen, onClose, children }: ModalProps) {
+  useEffect(() => {
+    if (isOpen) {
+      document.body.classList.add("overflow-hidden");
+    } else {
+      document.body.classList.remove("overflow-hidden");
+    }
+
+    return () => {
+      document.body.classList.remove("overflow-hidden");
+    };
+  }, [isOpen]);
+
   if (!isOpen) return null;
 
   return (

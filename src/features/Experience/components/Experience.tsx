@@ -4,7 +4,7 @@ import React from "react";
 import { FaBriefcase, FaCode, FaMapMarkerAlt } from "react-icons/fa";
 import experiences from "@/dummy/experience.json";
 
-// 1. Data untuk Timeline Experience
+// data timeline experience
 interface Experience {
   company: string;
   title: string;
@@ -23,7 +23,7 @@ export default function Experience() {
       className="py-10 lg:py-20 scroll-mt-[140px] min-h-screen h-full flex items-center"
     >
       <div className="container mx-auto max-w-[1400px] px-5 lg:px-10">
-        {/* Judul */}
+        {/* judul */}
         <div className="text-center mb-4">
           <span className="text-md font-semibold text-gray-400 tracking-widest uppercase">
             experience
@@ -36,35 +36,35 @@ export default function Experience() {
           A timeline of my professional growth, key achievements, and the
           technologies I've mastered along the way.
         </p>
-        {/* Divider */}
+        {/* divider */}
         <div className="w-[100px] h-1 bg-gradient-to-r from-transparent via-amber-400 to-transparent mx-auto mb-[60px] rounded-[2px]"></div>
 
-        {/* Timeline*/}
+        {/* timeline*/}
         <div className="relative">
-          {/* Garis Vertikal di Tengah */}
+          {/* garis vertikal tengah */}
           <div className="absolute left-1/2 top-0 h-full w-0.5 bg-amber-400/30 hidden lg:block"></div>
 
-          {/* Kontainer untuk item timeline */}
+          {/* kontener timeline */}
           <div className="relative flex flex-col gap-12">
             {(experiences as Experience[]).map((exp, index) => (
               <div key={index} className="relative">
-                {/* Titik pada Garis */}
+                {/* titik garis */}
                 <div className="absolute left-1/2 top-1/2 -translate-y-1/2 -translate-x-1/2 w-4 h-4 bg-amber-400 rounded-full hidden lg:block z-10"></div>
 
-                {/* Kontainer Kartu */}
+                {/* kontener card */}
                 <div
                   className={`
                     lg:w-[calc(50%-2.5rem)]
                     ${
                       index % 2 !== 0
-                        ? "lg:ml-[calc(50%+2.5rem)]" // Kartu Kanan (index 1)
-                        : "lg:mr-auto" // Kartu Kiri (index 0, 2)
+                        ? "lg:ml-[calc(50%+2.5rem)]" // card odd index = 1
+                        : "lg:mr-auto" // card even index = 0 dan 2)
                     }
                   `}
                 >
-                  {/* === Konten Kartu === */}
+                  {/* card content */}
                   <div className="p-6 bg-[#2c2c32] border border-amber-400/20 rounded-lg shadow-lg hover:border-amber-400/50 transition-all duration-300 hover:shadow-amber-400/10">
-                    {/* Header Kartu */}
+                    {/* card header */}
                     <div className="mb-3">
                       <span className="text-xs bg-amber-400/10 text-amber-400 py-1 px-3 rounded-full">
                         {exp.type}
@@ -83,12 +83,12 @@ export default function Experience() {
                       <span>{exp.location}</span>
                     </div>
 
-                    {/* Deskripsi */}
+                    {/* deskripsi */}
                     <p className="text-sm text-gray-300 mb-5">
                       {exp.description}
                     </p>
 
-                    {/* Key Achievements */}
+                    {/* key achive */}
                     <div className="mb-5">
                       <h4 className="flex items-center gap-2 text-md font-semibold text-amber-400 mb-2">
                         <FaBriefcase /> Key Achievements
@@ -105,7 +105,7 @@ export default function Experience() {
                       </ul>
                     </div>
 
-                    {/* Technologies */}
+                    {/* tech */}
                     <div>
                       <h4 className="flex items-center gap-2 text-md font-semibold text-amber-400 mb-3">
                         <FaCode /> Technologies
@@ -122,7 +122,6 @@ export default function Experience() {
                       </div>
                     </div>
                   </div>
-                  {/* === Akhir Konten Kartu === */}
                 </div>
               </div>
             ))}

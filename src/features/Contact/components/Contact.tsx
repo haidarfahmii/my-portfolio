@@ -1,21 +1,15 @@
 "use client";
 
 import React from "react";
-import {
-  FaEnvelope,
-  FaPhoneAlt,
-  FaMapMarkerAlt,
-  FaPaperPlane,
-} from "react-icons/fa";
+import { FaEnvelope, FaPhoneAlt, FaMapMarkerAlt } from "react-icons/fa";
 
-// Impor data JSON
+// import data json
 import contactInfo from "@/dummy/contact.json";
 
-// Impor komponen SocialLinks
+// import komponen
 import SocialLinks from "@/features/Hero/components/SocialLinks";
-import ContactForm from "@/components/ContactForm";
+import ContactForm from "@/features/Contact/forms/ContactForm";
 
-// Definisikan Tipe data
 interface ContactInfo {
   icon: string;
   title: string;
@@ -23,7 +17,7 @@ interface ContactInfo {
 }
 
 export default function Contact() {
-  // Fungsi untuk memilih ikon berdasarkan nama dari JSON
+  // memilih ikon dari json
   const getIcon = (iconName: string) => {
     switch (iconName) {
       case "email":
@@ -139,7 +133,7 @@ export default function Contact() {
             </form> */}
           </div>
 
-          {/* Kartu "Get In Touch" */}
+          {/* card get in touch */}
           <div className="flex flex-col gap-8">
             <div className="bg-[#2c2c32] p-6 md:p-8 rounded-lg border border-gray-700/50 shadow-lg">
               <h3 className="text-2xl font-semibold text-white mb-2">
@@ -165,7 +159,7 @@ export default function Contact() {
               </ul>
             </div>
 
-            {/* Kartu "Connect With Me" */}
+            {/* card conncet with me */}
             <div className="bg-[#2c2c32] p-6 md:p-8 rounded-lg border border-gray-700/50 shadow-lg">
               <h3 className="text-2xl font-semibold text-white mb-2">
                 Connect With Me
@@ -173,7 +167,6 @@ export default function Contact() {
               <p className="text-sm text-gray-400 mb-6">
                 Follow me on social media for updates and insights.
               </p>
-              {/* Menggunakan kembali komponen SocialLinks Anda */}
               <div className="flex justify-start">
                 <SocialLinks />
               </div>

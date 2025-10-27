@@ -1,11 +1,5 @@
 import Link from "next/link";
-import {
-  FaGithub,
-  FaLinkedin,
-  FaYoutube,
-  FaEnvelope,
-  FaInstagram,
-} from "react-icons/fa";
+import { FaGithub, FaLinkedin, FaEnvelope, FaInstagram } from "react-icons/fa";
 
 const socialLinks = [
   {
@@ -32,7 +26,7 @@ const socialLinks = [
 
 export default function SocialLinks() {
   return (
-    <div className="flex gap-4 justify-center items-center">
+    <div className="flex gap-5 justify-center items-center">
       {socialLinks.map((link) => (
         <Link
           key={link.label}
