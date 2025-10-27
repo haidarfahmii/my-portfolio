@@ -50,93 +50,92 @@ Sebelum memulai, pastikan Anda telah menginstal:
 
 ## 📂 Susunan Proyek
 ```bash
-my-portfolio/
-├── .gitignore
-├── README.md
-├── components.json
-├── eslint.config.mjs
-├── next.config.ts
-├── package-lock.json
-├── package.json
-├── postcss.config.mjs
+FAHMI-PORTFOLIO/
+├── .next/
+├── .qodo/
+├── node_modules/
 ├── public/
-│   ├── file.svg
-│   ├── globe.svg
 │   ├── icons/
-│   │   ├── css.svg
-│   │   ├── github.svg
-│   │   ├── gitlab.svg
-│   │   ├── html.svg
-│   │   ├── javascript.svg
-│   │   ├── nextjs.svg
-│   │   ├── postman.svg
-│   │   ├── reactjs.svg
-│   │   ├── svelte.svg
-│   │   └── vscode.svg
 │   ├── images/
-│   │   ├── foto.png
-│   │   ├── jinwo.png
+│   │   ├── photo.jpg
 │   │   ├── profile.jpg
 │   │   └── project.png
+│   ├── file.svg
+│   ├── globe.svg
 │   ├── next.svg
-│   ├── resume/
-│   │   ├── badge.svg
-│   │   ├── cap.svg
-│   │   └── icons/
-│   │       ├── bootstrap.svg
-│   │       ├── css3.svg
-│   │       ├── html5.svg
-│   │       ├── javascript.svg
-│   │       ├── nextjs.svg
-│   │       ├── php.svg
-│   │       ├── react.svg
-│   │       ├── scroll.svg
-│   │       └── tailwind.svg
 │   ├── vercel.svg
 │   └── window.svg
 ├── src/
 │   ├── app/
-│   │   ├── contact/
-│   │   │   └── page.tsx
+│   │   ├── api/
+│   │   │   └── auth/
+│   │   │      └── contact/
+│   │   │         └── route.ts
+│   │   ├── components/
+│   │   │   ├── modals/
+│   │   │   │   ├── ContactModal.tsx
+│   │   │   │   ├── CVModal.tsx
+│   │   │   │   └── Modal.tsx
+│   │   │   ├── ui/
+│   │   │   └── PageTransition.tsx
+│   │   │   └── ScrollToTop.tsx
+│   │   ├── dummy/
+│   │   │   ├── contact.json
+│   │   │   ├── experience.json
+│   │   │   ├── project.json
+│   │   │   ├── skill.json
+│   │   │   └── testimonial.json
+│   │   ├── feature/
+│   │   │   ├── About/components/
+│   │   │   │   └── AboutMe.tsx
+│   │   │   ├── Contact/
+│   │   │   │   └── Components/
+│   │   │   │      └── Contact.tsx
+│   │   │   │   └── forms/
+│   │   │   │      └── ContactForm.tsx
+│   │   │   │   └── hooks/
+│   │   │   │      └── useFormContact.tsx
+│   │   │   │   └── schema/
+│   │   │   │      └── contactValidationSchema.ts
+│   │   │   ├── Experience/components/
+│   │   │   │   └── Experience.tsx
+│   │   │   ├── Footer/components/
+│   │   │   │   └── Footer.tsx
+│   │   │   ├── Header/components/
+│   │   │   │   └── Header.tsx
+│   │   │   ├── Hero/components/
+│   │   │   │   ├── Hero.tsx
+│   │   │   │   ├── Photo.tsx
+│   │   │   │   └── SocialLinks.tsx
+│   │   │   ├── Navigation/components/
+│   │   │   │   ├── MobileNav.tsx
+│   │   │   │   └── Nav.tsx
+│   │   │   ├── Project/components/
+│   │   │   │   └── Project.tsx
+│   │   │   ├── Skill/components/
+│   │   │   │   └── Skill.tsx
+│   │   │   └── Testimonial/components/
+│   │   │       ├── Testimonial.tsx
+│   │   │       └── TestimonialCard.tsx
+│   │   ├── lib/
+│   │   │   └── utils.ts
+│   │   ├── services
+│   │   │   └── axios-instance.ts
+│   │   │   └── backendless.ts
 │   │   ├── favicon.ico
 │   │   ├── globals.css
 │   │   ├── layout.tsx
 │   │   └── page.tsx
-│   ├── components/
-│   │   ├── AboutMe.tsx
-│   │   ├── Experience.tsx
-│   │   ├── Header.tsx
-│   │   ├── Hero/
-│   │   │   └── Hero.tsx
-│   │   ├── MobileNav.tsx
-│   │   ├── Nav.tsx
-│   │   ├── PageTransition.tsx
-│   │   ├── Photo.tsx
-│   │   ├── ProfileCard.css
-│   │   ├── ProfileCard.jsx
-│   │   ├── ProfileImage.tsx
-│   │   ├── Project.tsx
-│   │   ├── Skill.tsx
-│   │   ├── SocialLinks/
-│   │   │   └── SocialLinks.tsx
-│   │   ├── StairTransition.tsx
-│   │   ├── Stairs.tsx
-│   │   ├── Stats.tsx
-│   │   └── ui/
-│   │       ├── button.tsx
-│   │       ├── input.tsx
-│   │       ├── scroll-area.tsx
-│   │       ├── select.tsx
-│   │       ├── sheet.tsx
-│   │       ├── tabs.tsx
-│   │       ├── textarea.tsx
-│   │       └── tooltip.tsx
-│   ├── dummy/
-│   │   ├── experience.json
-│   │   ├── project.json
-│   │   └── skill.json
-│   └── lib/
-│       └── utils.ts
+├── .env
+├── .gitignore
+├── components.json
+├── eslint.config.mjs
+├── next-env.d.ts
+├── next.config.ts
+├── package-lock.json
+├── package.json
+├── postcss.config.mjs
+├── README.md
 └── tsconfig.json
 ```
 
