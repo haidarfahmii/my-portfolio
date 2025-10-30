@@ -2,7 +2,7 @@ import * as Yup from "yup";
 
 export const contactValidationSchema = (variant: "modal" | "section") =>
   Yup.object({
-    name: Yup.string().required("Nama wajib diisi"),
+    name: Yup.string().required("Name is required"),
     email: Yup.string().email("Invalid email").required("Email is required"),
     subject:
       variant === "section"

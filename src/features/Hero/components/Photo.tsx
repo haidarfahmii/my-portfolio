@@ -93,7 +93,7 @@ export default function Photo() {
               src="/images/photo.jpg"
               priority
               fill
-              alt=""
+              alt="photo avatar"
               className="object-cover object-top rounded-2xl"
             />
           </motion.div>

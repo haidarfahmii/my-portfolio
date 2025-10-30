@@ -43,7 +43,7 @@ export default function useFormContact({
 
         // sukses
         setStatus("success");
-        setFeedback("Pesan terkirim! Saya akan segera menghubungi Anda.");
+        setFeedback("Message sent! I'll reply as soon as possible.");
         resetForm();
         if (onFormSubmit) {
           onFormSubmit();
@@ -53,10 +53,11 @@ export default function useFormContact({
         setStatus("error");
         if (isAxiosError(error) && error.response) {
           setFeedback(
-            error.response.data.message || "Terjadi kesalahan. Coba Lagi"
+            error.response.data.message ||
+              "An error occurred. Please try again."
           );
         } else {
-          setFeedback("Tidak bisa terhubung ke server. Coba lagi nanti...");
+          setFeedback("Couldn't connect to server. Please try again.");
         }
       } finally {
         setSubmitting(false);

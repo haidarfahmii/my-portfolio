@@ -8,7 +8,7 @@ export async function POST(request: NextRequest) {
     if (!name || !email || !message) {
       return NextResponse.json({
         success: false,
-        message: "Nama, email, pesan harus diisi",
+        message: "Name, email, and message are required",
         data: null,
       });
     }
@@ -22,7 +22,7 @@ export async function POST(request: NextRequest) {
     return NextResponse.json(
       {
         success: true,
-        message: "Pesan berhasil di kirim",
+        message: "message sent successfully",
         data: response,
       },
       {
@@ -33,7 +33,7 @@ export async function POST(request: NextRequest) {
     return NextResponse.json(
       {
         success: false,
-        message: error.message || "Gagal mengirim pesan, Coba lagi nanti...",
+        message: error.message || "failed to send message, try again later",
       },
       {
         status: 500,
