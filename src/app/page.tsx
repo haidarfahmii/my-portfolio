@@ -1,11 +1,10 @@
-"use client";
-
-import Image from "next/image";
-import Hero from "@/components/Hero/Hero";
-import AboutMe from "@/components/AboutMe";
-import Experience from "@/components/Experience";
-import Project from "@/components/Project";
-import Skill from "@/components/Skill";
+import Hero from "@/features/Hero/components/Hero";
+import AboutMe from "@/features/About/components/AboutMe";
+import Experience from "@/features/Experience/components/Experience";
+import Project from "@/features/Project/components/Project";
+import Skill from "@/features/Skill/components/Skill";
+import Testimonial from "@/features/Testimonial/components/Testimonial";
+import Contact from "@/features/Contact/components/Contact";
 
 export default function Home() {
   return (
@@ -15,6 +14,8 @@ export default function Home() {
       <Experience />
       <Project />
       <Skill />
+      <Testimonial />
+      <Contact />
     </main>
   );
 }

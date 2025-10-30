@@ -3,19 +3,10 @@ import { JetBrains_Mono } from "next/font/google";
 import "./globals.css";
 
 //  Components
-import Header from "@/components/Header";
+import Header from "@/features/Header/components/Header";
 import PageTransition from "@/components/PageTransition";
-import StairTransition from "@/components/StairTransition";
-
-// const geistSans = Geist({
-//   variable: "--font-geist-sans",
-//   subsets: ["latin"],
-// });
-
-// const geistMono = Geist_Mono({
-//   variable: "--font-geist-mono",
-//   subsets: ["latin"],
-// });
+import Footer from "@/features/Footer/components/Footer";
+import ScrollToTop from "@/components/ScrollToTop";
 
 const jetbrainsMono = JetBrains_Mono({
   weight: ["100", "200", "300", "400", "500", "600", "700", "800"],
@@ -46,10 +37,14 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${jetbrainsMono.variable} antialiased min-w-[300px]`}>
+      <body
+        className={`${jetbrainsMono.variable} antialiased min-w-[300px]`}
+        suppressHydrationWarning={true}
+      >
         <Header />
-        <StairTransition />
         <PageTransition>{children}</PageTransition>
+        <Footer />
+        <ScrollToTop />
       </body>
     </html>
   );

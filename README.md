@@ -4,34 +4,35 @@ Ini adalah proyek portofolio pribadi yang dibuat menggunakan Next.js, TypeScript
 
 ## ✨ Fitur Utama
 
-* **Responsif:** Didesain agar tampil baik di berbagai ukuran layar (desktop, tablet, mobile).
-* **Navigasi:** Dilengkapi dengan navigasi header yang sticky dan navigasi mobile (hamburger menu).
-* **Animasi Halus:** Menggunakan Framer Motion untuk transisi antar halaman dan animasi komponen.
-* **Komponen UI Modern:** Dibangun dengan Shadcn UI dan Radix UI untuk komponen yang aksesibel dan dapat disesuaikan.
-* **Scrollspy:** Navigasi aktif mengikuti bagian halaman yang sedang dilihat.
-* **Data Dinamis (Dummy):** Informasi pengalaman, proyek, dan keahlian diambil dari file JSON.
-* **Struktur Proyek Rapi:** Mengikuti standar struktur proyek Next.js dengan App Router.
+- **Responsif:** Didesain agar tampil baik di berbagai ukuran layar (desktop, tablet, mobile).
+- **Navigasi:** Dilengkapi dengan navigasi header yang sticky dan navigasi mobile (hamburger menu).
+- **Animasi Halus:** Menggunakan Framer Motion untuk transisi antar halaman dan animasi komponen.
+- **Komponen UI Modern:** Dibangun dengan Shadcn UI dan Radix UI untuk komponen yang aksesibel dan dapat disesuaikan.
+- **Scrollspy:** Navigasi aktif mengikuti bagian halaman yang sedang dilihat.
+- **Data Dinamis (Dummy):** Informasi pengalaman, proyek, dan keahlian diambil dari file JSON.
+- **Struktur Proyek Rapi:** Mengikuti standar struktur proyek Next.js dengan App Router.
 
 ## 🛠️ Teknologi yang Digunakan
 
-* **Framework:** [Next.js](https://nextjs.org/)
-* **Bahasa:** [TypeScript](https://www.typescriptlang.org/)
-* **Styling:** [Tailwind CSS](https://tailwindcss.com/)
-* **Komponen UI:** [Shadcn UI](https://ui.shadcn.com/), [Radix UI](https://www.radix-ui.com/)
-* **Animasi:** [Framer Motion](https://www.framer.com/motion/)
-* **Icons:** [React Icons](https://react-icons.github.io/react-icons/), [Lucide React](https://lucide.dev/)
-* **Linting:** [ESLint](https://eslint.org/)
+- **Framework:** [Next.js](https://nextjs.org/)
+- **Bahasa:** [TypeScript](https://www.typescriptlang.org/)
+- **Styling:** [Tailwind CSS](https://tailwindcss.com/)
+- **Komponen UI:** [Shadcn UI](https://ui.shadcn.com/), [Radix UI](https://www.radix-ui.com/)
+- **Animasi:** [Framer Motion](https://www.framer.com/motion/)
+- **Icons:** [React Icons](https://react-icons.github.io/react-icons/), [Lucide React](https://lucide.dev/)
+- **Linting:** [ESLint](https://eslint.org/)
 
 ## 📋 Prasyarat
 
 Sebelum memulai, pastikan Anda telah menginstal:
 
-* [Node.js](https://nodejs.org/) (Direkomendasikan versi >= 18)
-* [npm](https://www.npmjs.com/), [yarn](https://yarnpkg.com/), [pnpm](https://pnpm.io/), atau [bun](https://bun.sh/)
+- [Node.js](https://nodejs.org/) (Direkomendasikan versi >= 18)
+- [npm](https://www.npmjs.com/), [yarn](https://yarnpkg.com/), [pnpm](https://pnpm.io/), atau [bun](https://bun.sh/)
 
 ## 🚀 Instalasi
 
 1.  **Clone repositori:**
+
     ```bash
     git clone [https://github.com/haidarfahmii/my-portfolio.git](https://github.com/haidarfahmii/my-portfolio.git)
     cd my-portfolio
@@ -49,6 +50,7 @@ Sebelum memulai, pastikan Anda telah menginstal:
     ```
 
 ## 📂 Susunan Proyek
+
 ```bash
 FAHMI-PORTFOLIO/
 ├── .next/

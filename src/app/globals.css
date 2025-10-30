@@ -21,6 +21,17 @@
     @apply text-xl lg:text-3xl leading-[1.1] font-semibold;
   }
 
+  .scrollbar-hide {
+    /* Firefox */
+    scrollbar-width: none;
+    /* IE and Edge */
+    -ms-overflow-style: none;
+  }
+  .scrollbar-hide::-webkit-scrollbar {
+    /* Chrome, Safari, and Opera */
+    display: none;
+  }
+
   @keyframes pulse {
     0%,
     100% {
