@@ -33,7 +33,7 @@ export default function Hero() {
                 <span>Full-stack Web Developer</span>
               </div>
               <h1 className="h1 mb-6">
-                Hello I'm <br />
+                Hello I&apos;m <br />
                 <span className="text-amber-400 ">Muhammad Haidar Fahmi</span>
               </h1>
               <p className="max-w-[500px] mb-7 text-white/80">

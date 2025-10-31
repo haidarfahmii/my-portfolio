@@ -29,11 +29,15 @@ export async function POST(request: NextRequest) {
         status: 201,
       }
     );
-  } catch (error: any) {
+  } catch (error: unknown) {
+    let message = "failed to send message, try again later";
+    if (error instanceof Error) {
+      message = error.message;
+    }
     return NextResponse.json(
       {
         success: false,
-        message: error.message || "failed to send message, try again later",
+        message: message,
       },
       {
         status: 500,

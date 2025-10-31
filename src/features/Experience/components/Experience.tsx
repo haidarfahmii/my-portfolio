@@ -34,7 +34,7 @@ export default function Experience() {
         </h2>
         <p className="text-center max-w-2xl mx-auto text-white/80 mb-12">
           A timeline of my professional growth, key achievements, and the
-          technologies I've mastered along the way.
+          technologies I&apos;ve mastered along the way.
         </p>
         {/* divider */}
         <div className="w-[100px] h-1 bg-gradient-to-r from-transparent via-amber-400 to-transparent mx-auto mb-[60px] rounded-[2px]"></div>

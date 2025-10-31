@@ -40,11 +40,11 @@ export default function Contact() {
           </span>
         </div>
         <h2 className="text-center text-3xl lg:text-5xl font-bold text-amber-400 mb-5 [text-shadow:0_0_20px_rgba(251,191,36,0.3)]">
-          Let's Work Together
+          Let&apos;s Work Together
         </h2>
         <p className="text-center max-w-2xl mx-auto text-white/80 mb-12">
-          Have a project in mind or want to discuss opportunities? I'd love to
-          hear from you. Let's create something amazing together.
+          Have a project in mind or want to discuss opportunities? I&apos;d love
+          to hear from you. Let&apos;s create something amazing together.
         </p>
         {/* Divider */}
         <div className="w-[100px] h-1 bg-gradient-to-r from-transparent via-amber-400 to-transparent mx-auto mb-[60px] rounded-[2px]"></div>
@@ -56,7 +56,7 @@ export default function Contact() {
               Send Message
             </h3>
             <p className="text-sm text-gray-400 mb-6">
-              Fill out the form below and I'll get back to you as soon as
+              Fill out the form below and I&apos;ll get back to you as soon as
               possible.
             </p>
             <ContactForm />

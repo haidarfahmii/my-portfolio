@@ -43,7 +43,7 @@ export default function TestimonialCard({ testimonial }: TestimonialCardProps) {
         </div>
         {/* Quote */}
         <p className="text-sm text-gray-300 italic flex-grow">
-          "{testimonial.quote}"
+          &quot;{testimonial.quote}&quot;
         </p>
       </div>
     </div>
