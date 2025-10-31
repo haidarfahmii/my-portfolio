@@ -64,8 +64,8 @@
 }
 
 :root {
-  --background: #ffffff;
-  --foreground: #1c1c22;
+  --background: #1c1c22;
+  --foreground: #ffffff;
 }
 
 @theme inline {

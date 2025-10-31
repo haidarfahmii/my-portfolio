@@ -21,7 +21,7 @@ export default function Hero() {
       />
 
       <section
-        id="#home"
+        id="home"
         className="min-h-screen h-full flex items-center pt-15"
       >
         <div className="container mx-auto h-full lg:max-w-[1400px] px-5 lg:px-10">

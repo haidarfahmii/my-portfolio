@@ -14,13 +14,22 @@ const jetbrainsMono = JetBrains_Mono({
   subsets: ["latin"],
 });
 
+const siteUrl = "https://haidarfahmi.vercel.app";
+
 export const metadata: Metadata = {
-  title: "Haidar Fahmi | Web Portfolio Responsive",
+  metadataBase: new URL(siteUrl),
+  title: {
+    default: "Haidar Fahmi | Web Portfolio Responsive",
+    template: "%s | Haidar Fahmi",
+  },
   description:
-    "Welcome to the portfolio of Haidar Fahmi, a passionate Front-End Web Developer based in South Tangerang. Explore my projects, skills, and contact me for collaboration.",
+    "Welcome to the portfolio of Haidar Fahmi, a passionate Full-stack Web Developer based in South Tangerang. Explore my projects, skills, and contact me for collaboration.",
   keywords: [
     "Portfolio",
     "Web Developer",
+    "Full-Stack",
+    "Frontend",
+    "Backend",
     "HTML",
     "CSS",
     "JavaScript",
@@ -28,6 +37,49 @@ export const metadata: Metadata = {
     "TypeScript",
     "South Tangerang",
   ],
+  authors: [{ name: "Haidar Fahmi", url: siteUrl }],
+  creator: "Haidar Fahmi",
+
+  alternates: {
+    canonical: "/",
+  },
+
+  // OpenGraph (for Facebook, LinkedIn, etc.)
+  openGraph: {
+    title: "Haidar Fahmi | Web Portfolio Responsive",
+    description:
+      "Welcome to the portfolio of Haidar Fahmi, a passionate Full-stack Web Developer based in South Tangerang. Explore my projects, skills, and contact me for collaboration.",
+    url: siteUrl,
+    siteName: "Haidar Fahmi Portfolio",
+    images: [
+      {
+        url: "/images/photo.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Haidar Fahmi Portfolio",
+      },
+    ],
+    type: "website",
+    locale: "id_ID",
+  },
+  // Twitter Card
+  twitter: {
+    card: "summary_large_image",
+    title: "Haidar Fahmi | Web Portfolio Responsive",
+    creator: "@haidarbiasabae",
+    description:
+      "Welcome to the portfolio of Haidar Fahmi, a passionate Full-stack Web Developer based in South Tangerang. Explore my projects, skills, and contact me for collaboration.",
+    images: "/images/photo.jpg",
+  },
+  // Ikon
+  icons: {
+    icon: "/favicon.ico",
+    shortcut: "/favicon-16x16.png",
+    apple: "/apple-touch-icon.png",
+  },
+
+  // Tautan ke Web App Manifest
+  manifest: "/manifest.json",
 };
 
 export default function RootLayout({
