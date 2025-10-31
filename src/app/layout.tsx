@@ -14,8 +14,7 @@ const jetbrainsMono = JetBrains_Mono({
   subsets: ["latin"],
 });
 
-const siteUrl =
-  "https://my-portfolio-c1e6vcai0-haidarfahmiis-projects.vercel.app/";
+const siteUrl = "https://haidarfahmi.vercel.app/";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
@@ -54,7 +53,7 @@ export const metadata: Metadata = {
     siteName: "Haidar Fahmi Portfolio",
     images: [
       {
-        url: "/images/photo.jpg",
+        url: "/images/og-image.png",
         width: 1200,
         height: 630,
         alt: "Haidar Fahmi Portfolio",
@@ -70,7 +69,7 @@ export const metadata: Metadata = {
     creator: "@haidarbiasabae",
     description:
       "Welcome to the portfolio of Haidar Fahmi, a passionate Full-stack Web Developer based in South Tangerang. Explore my projects, skills, and contact me for collaboration.",
-    images: "/images/photo.jpg",
+    images: "/images/og-image.png",
   },
   // Ikon
   icons: {
