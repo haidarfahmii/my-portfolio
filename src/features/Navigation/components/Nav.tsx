@@ -1,13 +1,12 @@
 "use client";
 
 import Link from "next/link";
-import { usePathname } from "next/navigation";
 import { useState, useEffect } from "react";
 
 const links: { name: string; path: string }[] = [
   {
     name: "home",
-    path: "/",
+    path: "#home",
   },
   {
     name: "about",
@@ -36,48 +35,37 @@ const links: { name: string; path: string }[] = [
 ];
 
 export default function Nav() {
-  const pathName = usePathname();
-  const [activeHash, setActiveHash] = useState("");
+  const [activeHash, setActiveHash] = useState(() => {
+    if (typeof window !== "undefined") {
+      return window.location.hash || "#home";
+    }
+    return "#home";
+  });
 
-  // untuk hash
+  // efek ini untuk mendengarkan perubahan hash misal tombol back/forward
   useEffect(() => {
-    // fungsi untuk update hash
     const handleHashChange = () => {
-      setActiveHash(window.location.hash);
+      // jika hash menjadi kosong, set aktif ke #home
+      setActiveHash(window.location.hash || "#home");
     };
-    // Set hash awal saat komponen dimuat
-    handleHashChange();
-    // Dengarkan perubahan hash
+
     window.addEventListener("hashchange", handleHashChange);
-    // Cleanup listener saat komponen dibongkar
     return () => {
       window.removeEventListener("hashchange", handleHashChange);
     };
-  }, []); // berarti efek ini hanya berjalan sekali saat di mount
+  }, []); //h hanya jalan sekali saat di mount
 
+  // efek untuk intersection observer (scroll-spy)
   useEffect(() => {
-    // jalankan saat scrollspy di halaman utama
-    if (pathName !== "/") {
-      return;
-    }
+    // ambil ID dari setiap link
+    const sectionIds = links.map((link) => link.path.substring(1));
 
-    // Dapatkan daftar ID section dari 'links'
-    const sectionIds = [
-      "home",
-      ...links
-        .map((link) => link.path)
-        .filter((path) => path.startsWith("#"))
-        .map((path) => path.substring(1)), // Ambil "about" dari "/#about"
-    ];
-
-    // Dapatkan elemen section-nya
     const sections = sectionIds
       .map((id) => document.getElementById(id))
       .filter((el) => el !== null) as HTMLElement[];
 
-    if (sections.length === 0) return;
+    if (sectionIds.length === 0) return;
 
-    // Buat Observer
     const observerOptions = {
       rootMargin: "-140px 0px 0px 0px",
       threshold: 0.2,
@@ -86,71 +74,34 @@ export default function Nav() {
     const observer = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
-          // Saat section masuk ke layar, update hash aktif
           setActiveHash("#" + entry.target.id);
-        } else {
-          // saat elemen keluar dari pandangan
-          const leavingId = "#" + entry.target.id;
-
-          // Periksa apakah elemen yang keluar adalah yang sedang aktif
-          if (leavingId === activeHash) {
-            // Temukan index dari section yang keluar
-            const currentIndex = sectionIds.indexOf(entry.target.id);
-            if (currentIndex > 0) {
-              // Aktifkan section sebelumnya
-              const prevSectionId = sectionIds[currentIndex - 1];
-              setActiveHash("#" + prevSectionId);
-            }
-          }
         }
       });
     }, observerOptions);
 
-    // untuk amati setiap section
     sections.forEach((section) => observer.observe(section));
 
-    // di Cleanup
     return () => {
       sections.forEach((section) => observer.unobserve(section));
     };
-  }, [pathName, activeHash]);
+  }, []);
 
   return (
     <nav className="flex gap-4">
       {links.map((link, index) => {
-        // menentukan link aktif
-        const isActive = () => {
-          // Kalo link berupa hash
-          if (link.path.startsWith("#")) {
-            // Aktif jika pathName = "/"  dan hash cocok
-            return pathName === "/" && activeHash === link.path;
-          }
+        // Link aktif jika path-nya sama dengan activeHash di state
+        const isActive = activeHash === link.path;
 
-          // kalo link adalah halaman home, aktif kalo pathName cocok DAN tidak ada hash
-          if (link.path === "/") {
-            return (
-              pathName === "/" && (activeHash === "" || activeHash === "#home")
-            );
-          }
-
-          // untuk halaman lain
-          return pathName === link.path;
-        };
         return (
           <Link
             href={link.path}
             key={index}
+            // Selalu set activeHash ke path link yang diklik
             onClick={() => {
-              if (link.path.startsWith("#")) {
-                setActiveHash(link.path);
-              } else if (link.path === "/") {
-                setActiveHash("#home"); // Arahkan ke "home" saat klik "Home"
-              } else {
-                setActiveHash(""); // Hapus hash jika pindah halaman
-              }
+              setActiveHash(link.path);
             }}
             className={`${
-              isActive() && "text-amber-400 border-b-2 border-amber-400"
+              isActive && "text-amber-400 border-b-2 border-amber-400"
             } capitalize font-medium hover:text-amber-400 transition-all`}
           >
             {link.name}

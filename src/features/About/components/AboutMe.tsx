@@ -144,8 +144,8 @@ export default function AboutMe() {
               <Image
                 src="/images/profile.jpg"
                 alt="Portrait of Haidar Fahmi"
-                width={400}
-                height={400}
+                width={813}
+                height={1104}
                 loading="lazy"
                 className="w-full h-full object-cover object-top rounded-2xl"
               />

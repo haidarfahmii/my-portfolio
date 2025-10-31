@@ -1,7 +1,6 @@
 "use client";
 
 import Link from "next/link";
-import { usePathname } from "next/navigation";
 import { useState, useEffect } from "react";
 import { CiMenuFries } from "react-icons/ci";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
@@ -9,7 +8,7 @@ import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 const links: { name: string; path: string }[] = [
   {
     name: "home",
-    path: "/",
+    path: "#home",
   },
   {
     name: "about",
@@ -38,15 +37,19 @@ const links: { name: string; path: string }[] = [
 ];
 
 export default function MobileNav() {
-  const pathName = usePathname();
-  const [activeHash, setActiveHash] = useState("");
   const [open, setOpen] = useState(false);
+  const [activeHash, setActiveHash] = useState(() => {
+    if (typeof window !== "undefined") {
+      return window.location.hash || "#home";
+    }
+    return "#home";
+  });
 
   useEffect(() => {
     const handleHashChange = () => {
-      setActiveHash(window.location.hash);
+      setActiveHash(window.location.hash || "#home");
     };
-    handleHashChange();
+
     window.addEventListener("hashchange", handleHashChange);
     return () => {
       window.removeEventListener("hashchange", handleHashChange);
@@ -54,17 +57,7 @@ export default function MobileNav() {
   }, []);
 
   useEffect(() => {
-    if (pathName !== "/") {
-      return;
-    }
-
-    const sectionIds = [
-      "home",
-      ...links
-        .map((link) => link.path)
-        .filter((path) => path.startsWith("#"))
-        .map((path) => path.substring(1)),
-    ];
+    const sectionIds = links.map((link) => link.path.substring(1));
 
     const sections = sectionIds
       .map((id) => document.getElementById(id))
@@ -81,16 +74,6 @@ export default function MobileNav() {
         if (entry.isIntersecting) {
           // elemen masuk
           setActiveHash("#" + entry.target.id);
-        } else {
-          // elemen keluar misal saat kita kembali scroll ke atas
-          const leavingId = "#" + entry.target.id;
-          if (leavingId === activeHash) {
-            const currentIndex = sectionIds.indexOf(entry.target.id);
-            if (currentIndex > 0) {
-              const prevSectionId = sectionIds[currentIndex - 1];
-              setActiveHash("#" + prevSectionId);
-            }
-          }
         }
       });
     }, observerOptions);
@@ -100,13 +83,14 @@ export default function MobileNav() {
     return () => {
       sections.forEach((section) => observer.unobserve(section));
     };
-  }, [pathName, activeHash]);
+  }, []);
 
   return (
     <Sheet open={open} onOpenChange={setOpen}>
       <SheetTrigger
         onClick={() => setOpen(true)}
         className="flex justify-center items-center"
+        aria-label="open menu navigation"
       >
         <CiMenuFries className="text-2xl text-amber-400" />
       </SheetTrigger>
@@ -122,34 +106,17 @@ export default function MobileNav() {
         {/* nav */}
         <nav className="flex flex-col justify-center items-center gap-8">
           {links.map((link, index) => {
-            const isActive = () => {
-              if (link.path.startsWith("#")) {
-                return pathName === "/" && activeHash === link.path;
-              }
-              if (link.path === "/") {
-                return (
-                  pathName === "/" &&
-                  (activeHash === "" || activeHash === "#home")
-                );
-              }
-              return pathName === link.path;
-            };
+            const isActive = activeHash === link.path;
             return (
               <Link
                 href={link.path}
                 key={index}
                 onClick={() => {
-                  if (link.path.startsWith("#")) {
-                    setActiveHash(link.path);
-                  } else if (link.path === "/") {
-                    setActiveHash("#home");
-                  } else {
-                    setActiveHash("");
-                  }
+                  setActiveHash(link.path);
                   setOpen(false);
                 }}
                 className={`${
-                  isActive() && "text-amber-400 border-b-2 border-amber-400"
+                  isActive && "text-amber-400 border-b-2 border-amber-400"
                 }text-xl capitalize hover:text-amber-400 transition-all`}
               >
                 {link.name}

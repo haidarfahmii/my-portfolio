@@ -24,7 +24,7 @@ export default function TestimonialCard({ testimonial }: TestimonialCardProps) {
               {testimonial.initials}
             </div>
             <div className="min-h-[56px] flex flex-col justify-center">
-              <h4 className="font-semibold text-white">{testimonial.name}</h4>
+              <h3 className="font-semibold text-white">{testimonial.name}</h3>
               <p className="text-xs text-gray-400">{testimonial.title}</p>
             </div>
           </div>
