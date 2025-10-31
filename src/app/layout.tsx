@@ -14,7 +14,8 @@ const jetbrainsMono = JetBrains_Mono({
   subsets: ["latin"],
 });
 
-const siteUrl = "https://haidarfahmi.vercel.app";
+const siteUrl =
+  "https://my-portfolio-c1e6vcai0-haidarfahmiis-projects.vercel.app/";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),

@@ -1,6 +1,7 @@
 import { MetadataRoute } from "next";
 
-const siteUrl = "https://haidarfahmi.vercel.app";
+const siteUrl =
+  "https://my-portfolio-c1e6vcai0-haidarfahmiis-projects.vercel.app/";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   // Hanya ada satu halaman utama
