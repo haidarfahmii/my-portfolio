@@ -11,7 +11,16 @@
       "Engineered RESTful APIs to manage data flow between the client-side and server-side of applications.",
       "Practiced Agile (Scrum) methodologies and Git version control in a team-based environment to simulate a professional workflow."
     ],
-    "technologies": ["HTML", "CSS", "JavaScript", "Next.js"]
+    "technologies": [
+      "HTML",
+      "CSS",
+      "Typescript",
+      "Next.js",
+      "Tailwind CSS",
+      "Postman",
+      "Git",
+      "Github"
+    ]
   },
   {
     "company": "LingoTalk Ltd",
@@ -25,7 +34,7 @@
       "Assisted in debugging and refactoring existing code, helping to improve application stability and UI consistency.",
       "Participated in code reviews and agile ceremonies, gaining hands-on experience in a professional development workflow."
     ],
-    "technologies": ["Figma", "CSS", "Svelte.js"]
+    "technologies": ["Figma", "CSS", "Svelte.js", "Postman", "Git", "Github"]
   },
   {
     "company": "Bangkit Academy",
